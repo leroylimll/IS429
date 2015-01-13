@@ -12,7 +12,7 @@
 
     <!-- CHAT MARKUP -->
     <div class='example-chat l-demo-container'>
-      <header>Firebase Chat</header>
+      <header><h2>How much do you think Prof Chris earns a month?</h2></header>
 
       <div class='example-chat-toolbar'>
         <label for='nameInput'>Your name:</label>
@@ -27,7 +27,7 @@
       </ul>
 
       <footer>
-        <input ng-model='msg' ng-keydown="addMessage($event)" type='text' id='messageInput'  placeholder='Type a message...'>
+        SGD<input ng-model='msg' ng-keydown="addMessage($event)" type='text' id='messageInput'  placeholder='your guess...'>
       </footer>
     </div>
 
@@ -36,7 +36,7 @@
       myApp.controller('MyController', ['$scope', '$firebase',
         function($scope, $firebase) {
           //CREATE A FIREBASE REFERENCE
-          var ref = new Firebase("https://is429-leroylimll.firebaseio.com//");
+          var ref = new Firebase("https://is429-limll-salguess.firebaseio.com/");
           // GET MESSAGES AS AN ARRAY
           $scope.messages = $firebase(ref).$asArray();
           //ADD MESSAGE METHOD
