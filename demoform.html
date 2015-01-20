@@ -12,7 +12,7 @@
 
 <hr/>
 
-<button class="btn btn-primary" ng-click="editUser('new')">
+<button class="btn btn-primary" ng-click="editItem('new')">
 <span class="glyphicon glyphicon-plus"></span>  Add New Expenditure Item
 </button>
 
@@ -122,14 +122,23 @@
         if (id == 'new') {
             $scope.edit = true;
             $scope.incomplete = true;
-            $scope.fName = '';
-            $scope.lName = '';
-            console.log("new user.");
+            $scope.iDate = '';
+            $scope.iShopName = '';
+            $scope.iItem = '';
+            $scope.iQty = '';
+            $scope.iPrice = '';
+
+            console.log("new item.");
         } else {
             $scope.edit = true;
-            $scope.fName = $scope.users[id-1].fName;
-            $scope.lName = $scope.users[id-1].lName; 
-            console.log("existing user.");
+
+            $scope.items[$scope.currentId-1].iDate = $scope.iDate;
+            $scope.items[$scope.currentId-1].iShopName = $scope.iShopName;
+            $scope.items[$scope.currentId-1].iItem = $scope.iItem;
+            $scope.items[$scope.currentId-1].iQty = $scope.iQty;
+            $scope.items[$scope.currentId-1].iPrice = $scope.iPrice;
+            
+            console.log("existing item.");
         }
     };
 
@@ -173,16 +182,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
