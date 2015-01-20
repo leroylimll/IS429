@@ -12,6 +12,10 @@
 
 <hr/>
 
+<button class="btn btn-primary" ng-click="editUser('new')">
+<span class="glyphicon glyphicon-plus"></span>  Add New Expenditure Item
+</button>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -42,11 +46,6 @@
 </table>
 
 <hr>
-<button class="btn btn-success" ng-click="editUser('new')">
-<span class="glyphicon glyphicon-plus"></span>  Add New Expenditure Item
-</button>
-<hr>
-
 
 <h3 ng-show="edit">Create New User:</h3>
 <h3 ng-hide="edit">Edit User:</h3>
