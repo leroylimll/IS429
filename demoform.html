@@ -23,11 +23,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="user in users">
-      <td>{{ user.fName }}</td>
-      <td>{{ user.fName }}</td>
-      <td>{{ user.lName }}</td>
-      <td>{{ user.lName }}</td>
+    <tr ng-repeat="item in items">
+      <td>{{ item.iDate }}</td>
+      <td>{{ item.iShopName }}</td>
+      <td>{{ item.iItem }}</td>
+      <td>{{ item.iQty }}</td>
+      <td>${{ item.iPrice }}</td>
       <td>
         <button class="btn" ng-click="editItem(item.id)">
           <span class="glyphicon glyphicon-pencil"></span>  Edit
