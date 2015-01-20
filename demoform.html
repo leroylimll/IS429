@@ -5,10 +5,12 @@
 <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 </head>
 
-<body ng-controller="userController">
+<body ng-controller="itemController">
 <div class="container">
 
-<h3>My Expenditure</h3>
+<h1>My Expenditure</h1>
+
+<hr/>
 
 <table class="table table-striped">
   <thead>
@@ -40,7 +42,7 @@
 
 <hr>
 <button class="btn btn-success" ng-click="editUser('new')">
-<span class="glyphicon glyphicon-star"></span>  Add New Expenditure Item
+<span class="glyphicon glyphicon-plus"></span>  Add New Expenditure Item
 </button>
 <hr>
 
@@ -83,19 +85,19 @@
 </div>
 
 <script>
-  function userController($scope) {
+  function itemController($scope) {
     $scope.fName = '';
     $scope.lName = '';
     $scope.passw1 = '';
     $scope.passw2 = '';
     
     //We can replace this with a Firebase url later on. 
-    $scope.users = [
-        {id:1, fName:'Hege'  , lName:"Pege" },
-        {id:2, fName:'Kim'   , lName:"Pim" },
-        {id:3, fName:'Jack'  , lName:"Jones" },
-        {id:4, fName:'John'  , lName:"Doe" },
-        {id:5, fName:'Peter' , lName:"Pan" }
+    $scope.items = [
+        {id:1, iDate:'2 Jan 2015'  , iShopName:"Starbucks", iItem:"Cafe Latte", iQty:1, iPrice:4.30 },
+        {id:2, iDate:'2 Jan 2015'  , iShopName:"Burger King", iItem:"BK Fish'N Crisp", iQty:1, iPrice:2.00 },
+        {id:3, iDate:'3 Jan 2015'  , iShopName:"McDonalds", iItem:"Ice-cream", iQty:1, iPrice:0.80 },
+        {id:4, iDate:'4 Jan 2015'  , iShopName:"McDonalds", iItem:"Apple Pie", iQty:2, iPrice:1.00 },
+        {id:5, iDate:'26 Jan 2015'  , iShopName:"Tea Party", iItem:"Pasta", iQty:2, iPrice:4.50 },
     ];
     
     $scope.edit = true;
